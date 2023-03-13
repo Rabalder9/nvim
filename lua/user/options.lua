@@ -53,10 +53,6 @@ vim.opt.shortmess:append "c"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 
-vim.cmd [[map <leader>z :! zathura %<.pdf &<CR><CR>]]
-vim.cmd [[map <leader>p :w \| :! pdflatex %<CR><CR> \| :! biber %:r <CR> \| :! pdflatex %<CR><CR>]]
-vim.cmd [[map <leader>c :%y+<CR>]]
-
 local Terminal  = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
 local insert_cite = Terminal:new({ cmd = "insert_cite", hidden = true })

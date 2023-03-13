@@ -46,6 +46,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "luisiacc/gruvbox-baby"
   use "numToStr/Comment.nvim"
+  --use {'neoclide/coc.nvim', branch = 'release'}
   use "lervag/vimtex"
   use "lunarvim/darkplus.nvim"
   use "Mofiqul/vscode.nvim"

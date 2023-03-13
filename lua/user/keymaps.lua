@@ -11,10 +11,12 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+keymap("n", "<leader>r", ":VimtexTocToggle<cr>", opts)
 keymap("n", "<leader>p", ":w | :! pdflatex %<CR><CR> | :! biber %:r <CR> | :! pdflatex %<CR><CR>", opts)
+keymap("n", "<leader>j", ":wincmd h<cr>", opts)
+keymap("n", "<leader>k", ":wincmd l<cr>", opts)
 
 vim.cmd [[map <leader>z :! zathura %<.pdf &<CR><CR>]]
-vim.cmd [[map <leader>p :w \| :! pdflatex %<CR><CR> \| :! biber %:r <CR> \| :! pdflatex %<CR><CR>]]
 vim.cmd [[map <leader>c :%y+<CR>]]
 
 local Terminal  = require('toggleterm.terminal').Terminal
@@ -30,7 +32,11 @@ function _insert_cite_toggle()
 end
 
 vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>s", "<cmd>lua _insert_cite_toggle()<CR>", {noremap = true, silent = true})
+--vim.api.nvim_set_keymap("n", "<leader>s", "<cmd>lua _insert_cite_toggle()<CR>", {noremap = true, silent = true})
+
+
+
+
 
 -- Visual mode --
 -- Stay in indent mode
