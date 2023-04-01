@@ -52,19 +52,3 @@ vim.opt.shortmess:append "c"
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
-
-local Terminal  = require('toggleterm.terminal').Terminal
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
-local insert_cite = Terminal:new({ cmd = "insert_cite", hidden = true })
-
-function _lazygit_toggle()
-  lazygit:toggle()
-end
-
-function _insert_cite_toggle()
-  insert_cite:toggle()
-end
-
-vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>q", "<cmd>lua _insert_cite_toggle()<CR>", {noremap = true, silent = true})
-

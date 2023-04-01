@@ -52,6 +52,8 @@ return packer.startup(function(use)
   use "Mofiqul/vscode.nvim"
   use "akinsho/toggleterm.nvim"
   use {
+
+
     'vimwiki/vimwiki',
     config = function()
       vim.g.vimwiki_list = {
@@ -71,10 +73,10 @@ return packer.startup(function(use)
 
 
 
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  }
+--  use {
+--    "nvim-treesitter/nvim-treesitter",
+--    run = ":TSUpdate",
+--  }
 
 
   -- Automatically set up your configuration after cloning packer.nvim
